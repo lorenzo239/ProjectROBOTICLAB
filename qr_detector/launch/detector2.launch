@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+
+<launch>
+    <node pkg="nodelet"
+          type="nodelet"
+          name="qr_detector2"
+          args="standalone qr_detector/qr_detector_nodelet">
+        <remap from="image" to="/robot2/camera/image_raw"/>
+	<remap from="/qr_codes"  to="/robot2/qr_codes" />
+    </node>
+</launch>
