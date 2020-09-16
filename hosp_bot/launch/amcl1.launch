@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <!-- Localization-->
+  <node pkg="amcl" type="amcl" name="robot1_amcl" output="screen">
+    <remap from="scan" to="robot1/scan"/>
+    <rosparam file="$(find hosp_bot)/config/amcl1.yaml" command="load" />
+    <remap from="initialpose"               to="/robot1/initialpose"/>
+    <remap from="amcl_pose"                 to="/robot1/amcl_pose"/>
+    <remap from="particlecloud"             to="/robot1/particlecloud"/>
+  </node>
+ 
+</launch>

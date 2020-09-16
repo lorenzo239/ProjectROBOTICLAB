@@ -1,0 +1,5 @@
+int32 meds
+int32 food
+int32 room
+---
+bool ok
